@@ -8,7 +8,6 @@ import emoji
 from nltk.corpus import stopwords
 from qalsadi import lemmatizer
 import nltk
-from qalsadi import lemmatizer
 
 # Ensure NLTK stopwords downloaded
 nltk.download('stopwords')
