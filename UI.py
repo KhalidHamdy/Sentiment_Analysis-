@@ -1,31 +1,3 @@
-# # streamlit_app.py
-# import streamlit as st
-# import requests
-
-# st.title("Sentiment Analysis")
-# st.write("Enter a review below and get the sentiment:")
-
-# review = st.text_area("Review")
-
-# if st.button("Predict Sentiment"):
-#     if review.strip() == "":
-#         st.warning("Please enter a review.")
-#     else:
-#         with st.spinner("Predicting..."):
-#             response = requests.post(
-#                 "http://127.0.0.1:5000/predict",
-#                 json={"review": review}
-#             )
-
-#             if response.status_code == 200:
-#                 result = response.json()
-#                 sentiment = result["prediction"]
-#                 sentiment = "Postive" if sentiment == 1 else "Negative"  
-#                 st.success(f"Sentiment: **{sentiment}**")
-#             else:
-#                 st.error("Failed to get a response from the Flask API.")
-
-
 import streamlit as st
 import requests
 
