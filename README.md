@@ -27,7 +27,7 @@ The logistic regression model achieves 85% accuracy on a test set on Arabic revi
 1) Create new environment using the following command 
 
 ```bash 
-$ conda create -n Arabic-sentiment python=3.8
+$ conda create -n Arabic-sentiment python=3.9
 ```
 2) Activate the environment
 
