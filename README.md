@@ -14,7 +14,7 @@ This project implements a sentiment analysis model to predict the sentiment (pos
 
 4) A user-friendly web interface built with Flask and Streamlit, allowing users to input Arabic reviews and view sentiment analysis results in real-time. 
 
-6) Built with Python and popular NLP libraries for robust text processing.
+5) Built with Python and popular NLP libraries for robust text processing.
 
  
 ## Results 
@@ -57,7 +57,7 @@ $ pip install -r requirements.txt
 $ python app.py
 ```
 
-2) open another terminal in the same directory Run the streamlit application 
+2) open another terminal in the same directory and Run the streamlit application 
 
 ```bash 
 $ streamlit run UI.py
