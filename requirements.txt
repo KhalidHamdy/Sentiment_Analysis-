@@ -1,0 +1,9 @@
+emoji==2.14.1
+nltk==3.9.1
+qalsadi==0.5
+requests==2.32.3
+streamlit==1.45.0
+transformers==4.51.3
+torch==2.7.0
+joblib==1.5.0
+flask==3.1.0
