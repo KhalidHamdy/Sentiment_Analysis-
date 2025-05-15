@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 import re
 import emoji
 from nltk.corpus import stopwords
@@ -63,5 +58,3 @@ def clean_text(text):
     
     text = remove_stopwords(text)
     return text
-
-

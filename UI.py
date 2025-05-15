@@ -16,7 +16,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.title("تحليل المراجعات")
-st.write("أدخل رأيك هنا للحصول على التحليل")
+st.write("أدخل رأيك هنا للحصول على التحليل (الكلام غير العربي سيتم تجاهله)")
 
 review = st.text_area("الرأي")
 
@@ -24,15 +24,18 @@ if st.button("توقع المشاعر"):
     if review.strip() == "":
         st.warning("يرجى إدخال رأيك.")
     else:
-        with st.spinner("جارٍ التحليل..."):
-            response = requests.post(
-                "http://127.0.0.1:5000/predict",
-                json={"review": review}
-            )
+        try:
+            with st.spinner("جارٍ التحليل..."):
+                response = requests.post(
+                    "http://192.168.1.4:5000/predict",
+                    json={"review": review}
+                )
 
-            if response.status_code == 200:
-                result = response.json()
-                sentiment = result["prediction"]
-                st.success(f"المشاعر: **{sentiment}**")
-            else:
-                st.error("فشل في الحصول على استجابة")
+                if response.status_code == 200:
+                    result = response.json()
+                    sentiment = result["prediction"]
+                    st.success(f"المشاعر: **{sentiment}**")
+                else:
+                    st.error("فشل في الحصول على استجابة")
+        except requests.exceptions.RequestException as e:
+            print(f"Error connecting to Flask server: {e}")

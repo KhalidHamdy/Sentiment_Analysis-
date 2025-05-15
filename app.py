@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 from flask import Flask, request, jsonify
 import joblib
 from wrangle_utils import clean_text  # Preprocessing function
