@@ -5,8 +5,8 @@ import traceback
 from embedding import embeddings
 from subjectivity import predict_subjectivity
 # Load model and vectorizer
-model = joblib.load("trained_model.sav")
-threshold = joblib.load("threeshold.pkl")
+model = joblib.load("models/trained_model.sav")
+threshold = joblib.load("models/threeshold.pkl")
 app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
